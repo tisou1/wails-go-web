@@ -95,7 +95,7 @@ func (a *App) GetBreadList() []string {
 	return breeds
 }
 
-// 获取制定图片
+// 获取指定图片
 func (a *App) GetImageUrlByBreed(breed string) []string {
 	url := fmt.Sprintf("%s%s%s%s", "https://dog.ceo/api/", "breed/", breed, "/images")
 	response, err := http.Get(url)
