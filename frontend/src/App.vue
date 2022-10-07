@@ -1,9 +1,17 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'</script>
 
+  
+import HelloWorld from './components/HelloWorld.vue'
+import Test from './components/window.vue'
+import Event from './components/event.vue'
+
+
+</script>
 <template>
 
   <HelloWorld/>
+  <Test />
+  <Event/>
 </template>
 
 <style>

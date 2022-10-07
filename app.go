@@ -8,6 +8,8 @@ import (
 	"log"
 	"net/http"
 	"sort"
+
+	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 
 // App struct
@@ -112,4 +114,22 @@ func (a *App) GetImageUrlByBreed(breed string) []string {
 	json.Unmarshal(responseData, &data)
 
 	return data.Message
+}
+
+// ===========窗口全屏==========
+func (a *App) WindowFull() {
+	runtime.WindowFullscreen(a.ctx)
+}
+
+type Person1 struct {
+	Name string `json:"name"`
+	Age  int    `json:"age"`
+}
+
+// 触发事件
+func (a *App) EventsEmit2() {
+	runtime.EventsEmit(a.ctx, "click", Person1{
+		"tiry",
+		22,
+	})
 }
