@@ -18,6 +18,10 @@ export function GetRandomInageUrl() {
   return window['go']['main']['App']['GetRandomInageUrl']();
 }
 
+export function OpenDialog(arg1) {
+  return window['go']['main']['App']['OpenDialog'](arg1);
+}
+
 export function WindowFull() {
   return window['go']['main']['App']['WindowFull']();
 }

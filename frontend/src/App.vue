@@ -4,6 +4,8 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Test from './components/window.vue'
 import Event from './components/event.vue'
+import Dialog from './components/dialog.vue'
+
 
 
 </script>
@@ -12,6 +14,7 @@ import Event from './components/event.vue'
   <HelloWorld/>
   <Test />
   <Event/>
+  <Dialog/>
 </template>
 
 <style>

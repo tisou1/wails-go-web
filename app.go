@@ -133,3 +133,17 @@ func (a *App) EventsEmit2() {
 		22,
 	})
 }
+
+type DialogOption struct {
+	Title   string `json:"title"`
+	Message string `json:"message"`
+}
+
+// 打开对话框
+func (a *App) OpenDialog(arg DialogOption) {
+	runtime.MessageDialog(a.ctx, runtime.MessageDialogOptions{
+		Type:    "warning",
+		Title:   arg.Title,
+		Message: arg.Message,
+	})
+}
